@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+
+button {
+  outline: none;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+}
