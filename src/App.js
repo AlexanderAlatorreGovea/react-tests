@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import "./App.css";
+import TodoApp from "./todoApp/TodoApp";
 
 export const formatBirthday = (date) => {
   const bday = new Date(date);
@@ -64,15 +65,15 @@ function App() {
   return (
     <div className="App">
       <h1>People</h1>
-
       <button onClick={refresh}>Refresh</button>
       {peopleData}
+      <TodoApp/>
     </div>
   );
 }
 
 function UserData({ item }) {
-  console.log("item:", item);
+  
   let birdDate = formatBirthday(item.dob.date);
   const {
     name: { first, last },
